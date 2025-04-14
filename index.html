@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AI Portfolio of Your Name - Computer Science Engineer specializing in Machine Learning and Web Development">
+    <meta name="keywords" content="AI, Portfolio, Machine Learning, Web Developer, React, Python">
+    <title>Pankaj Yadav | Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Initial styles to prevent FOUC */
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #neural-network {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- AI Animation Elements -->
+    <div id="neural-network"></div>
+    <div class="ai-chips">
+        <div class="chip"></div>
+        <div class="chip"></div>
+        <div class="chip"></div>
+    </div>
+    <div class="neural-connections"></div>
+
+    <!-- Main Content -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Pankaj_<span>Yadav</span></div>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about"><i class="fas fa-robot"></i> About</a></li>
+                <li><a href="#skills"><i class="fas fa-brain"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="#contact"><i class="fas fa-comment-dots"></i> Contact</a></li>
+                <li><button id="dark-mode-toggle" class="btn-icon"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1><span class="typed-text"></span><span class="ai-pulse"></span></h1>
+            <p class="ai-subtitle">Computer Science Engineer | AI Researcher | Data Science</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-gradient"><i class="fas fa-eye"></i> View Projects</a>
+                <a href="#" class="btn btn-holographic" id="resume-btn"><i class="fas fa-file-alt"></i> Download CV</a>
+                <a href="#contact" class="btn btn-holographic"><i class="fas fa-paper-plane"></i> Contact Us</a>
+            </div>
+            <div class="voice-wave"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2><i class="fas fa-question-circle"></i> About This AI</h2>
+            <div class="about-grid">
+                <div class="about-card holographic">
+                    <div class="about-image">
+                        <div class="glowing-border"></div>
+                        <img src="Images/Pankaj Yadav.png" alt="AI Avatar" loading="lazy">
+                    </div>
+                    <div class="about-info">
+                        <h3>Pankaj Yadav</h3>
+                        <p>Computer Science Engineer</p>
+                        <div class="ai-stats">
+                            <div class="stat"><span>Email ID:</span> <span
+                                    class="stat-value">pankajyadavldy@gmail.com</span></div>
+                            <div class="stat"><span>Mobile No:</span> <span class="stat-value">+91 9335288731</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>Hello, I'm a Pankaj Yadav passionate Computer Science student pursuing my B.Tech after completing
+                        a Diploma in Computer Science. With strong skills in Python, SQL, MS Office, and Web
+                        Development, I like turning ideas into functional solutions. Currently, I’m deepening my
+                        knowledge of Data Structures and Algorithms to sharpen my problem-solving abilities.</p>
+                    <div class="tech-stack">
+                        <div class="tech-item" data-skill="95"><span>Python</span></div>
+                        <div class="tech-item" data-skill="90"><span>Basic to Advance Microsoft Excel</span></div>
+                        <div class="tech-item" data-skill="70"><span>Web Developer</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2><i class="fas fa-cogs"></i> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card holographic">
+                    <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-card holographic">
+                    <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Basic to Advance Microsoft Excel</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card holographic">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>SQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card holographic">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                <!-- Hidden skills that will be shown when clicking "Load More" -->
+                <!-- <div class="skill-card holographic hidden-skill">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Engineering</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+                <div class="skill-card holographic hidden-skill">
+                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Computing</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%"></div>
+                    </div>
+                </div>
+                <div class="skill-card holographic hidden-skill">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Analysis</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card holographic hidden-skill">
+                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>AI Security</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="more-btn-container">
+                <button id="load-more-skills" class="btn btn-holographic"><i class="fas fa-plus"></i> Load More
+                    Skills</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card holographic">
+                    <div class="project-image">
+                        <img src="Images/AI Voice Assistant - Jarvis-like Assistant.png" alt="AI Project"
+                            loading="lazy">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">HTML</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Voice Assistant - Jarvis-like Assistant</h3>
+                        <p>An AI voice assistant acts like a smart friend, helping with tasks, apps, and info using your
+                            voice commands.</p>
+                        <a href="https://github.com/JE-Pankaj-Yadav/AI-based-voice-assistant-Like-jarvis.git"
+                            class="btn btn-gradient"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                <div class="project-card holographic">
+                    <div class="project-image">
+                        <img src="Images/CEZOR'S Unisex Salon.png" alt="AI Project" loading="lazy">
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CEZOR'S Unisex Salon Website</h3>
+                        <p>CEZOR'S Unisex Salon website showcases services, prices, and gallery with a modern,
+                            responsive design for easy appointment booking.</p>
+                        <a href="https://github.com/JE-Pankaj-Yadav/UNISEX-SALON.git" class="btn btn-gradient"><i
+                                class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                <div class="project-card holographic">
+                    <div class="project-image">
+                        <img src="Images/Diploma Courses Information Portal.png" alt="AI Project" loading="lazy">
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Diploma Courses Information Portal</h3>
+                        <p>This website provides complete information about diploma courses in engineering and technical
+                            education in Uttar Pradesh, India.</p>
+                        <a href="https://github.com/JE-Pankaj-Yadav/Diploma-Courses-Information-Portal.git"
+                            class="btn btn-gradient"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                <!-- <div class="project-card holographic">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="AI Project" loading="lazy">
+                        <div class="project-tags">
+                            <span class="tag">GAN</span>
+                            <span class="tag">TensorFlow</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Art Generation</h3>
+                        <p>Generative Adversarial Network for creating unique digital artwork.</p>
+                        <a href="#" class="btn btn-gradient"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="more-btn-container">
+                <a href="#" class="btn btn-holographic"><i class="fas fa-plus"></i> More Projects</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card holographic" style="cursor: pointer;">
+                    <div class="certification-icon"><i class="fas fa-award"></i></div>
+                    <h3>Basic to Advanced Microsoft Excel</h3>
+                    <p>Skill Nation</p>
+                    <div class="certification-date">2025</div>
+                </div>
+                <div class="certification-card holographic" style="cursor: pointer;">
+                    <div class="certification-icon"><i class="fas fa-award"></i></div>
+                    <h3>Web Development In Python</h3>
+                    <p>Education World</p>
+                    <div class="certification-date">2023</div>
+                </div>
+                <div class="certification-card holographic" style="cursor: pointer;">
+                    <div class="certification-icon"><i class="fas fa-award"></i></div>
+                    <h3>Certification Program In Job Orientation</h3>
+                    <p>NIIT Foundation</p>
+                    <div class="certification-date">2023</div>
+                </div>
+                <!-- <div class="certification-card holographic" style="cursor: pointer;">
+                    <div class="certification-icon"><i class="fas fa-award"></i></div>
+                    <h3>Cloud AI Professional</h3>
+                    <p>AWS</p>
+                    <div class="certification-date">2020</div>
+                </div> -->
+            </div>
+            <!-- <div class="more-btn-container">
+                <a href="#" class="btn btn-holographic"><i class="fas fa-plus"></i> More Certifications</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificate-modal" class="modal">
+        <div class="modal-content holographic">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h3 id="modal-cert-title"></h3>
+                <p id="modal-cert-issuer"></p>
+                <div class="certificate-date" id="modal-cert-date"></div>
+                <img id="modal-cert-image" src="" alt="Certificate" loading="lazy" class="certificate-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2><i class="fas fa-comment-dots"></i> Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-info holographic">
+                    <h3>Contact Me</h3>
+                    <div class="contact-item"><i class="fas fa-envelope"></i> pankajyadavldy@gmail.com</div>
+                    <div class="contact-item"><i class="fab fa-github"></i> https://github.com/JE-Pankaj-Yadav</div>
+                    <div class="contact-item"><i class="fab fa-linkedin"></i> linkedin.com/in/yourusername</div>
+                </div>
+                <form class="contact-form holographic">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message " required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gradient"><i class="fas fa-paper-plane"></i> Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/JE-Pankaj-Yadav"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>© 2025 Pankaj Yadav - Computer Science Engineer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Wait for DOM to load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Show page after load
+            document.body.style.opacity = '1';
+
+            // Initialize Three.js Neural Network
+            const neuralScene = new THREE.Scene();
+            const neuralCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const neuralRenderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            neuralRenderer.setSize(window.innerWidth, window.innerHeight);
+            document.getElementById('neural-network').appendChild(neuralRenderer.domElement);
+
+            // Create neural nodes
+            const neuralNodes = [];
+            const nodeGeometry = new THREE.SphereGeometry(0.05, 16, 16);
+            const nodeMaterial = new THREE.MeshBasicMaterial({ color: 0x00bcd4 });
+
+            for (let i = 0; i < 25; i++) {
+                const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
+                node.position.x = (Math.random() - 0.5) * 10;
+                node.position.y = (Math.random() - 0.5) * 10;
+                node.position.z = (Math.random() - 0.5) * 10;
+                neuralScene.add(node);
+                neuralNodes.push(node);
+            }
+
+            neuralCamera.position.z = 5;
+
+            // Animation loop
+            function animateNeuralNetwork() {
+                requestAnimationFrame(animateNeuralNetwork);
+
+                // Rotate nodes
+                neuralNodes.forEach(node => {
+                    node.rotation.x += 0.001;
+                    node.rotation.y += 0.002;
+                });
+
+                // Clear old connections
+                neuralScene.children.slice().forEach(child => {
+                    if (child.type === 'Line') neuralScene.remove(child);
+                });
+
+                // Create new connections
+                const lineMaterial = new THREE.LineBasicMaterial({ color: 0x00bcd4, opacity: 0.3, transparent: true });
+                for (let i = 0; i < neuralNodes.length; i++) {
+                    for (let j = i + 1; j < neuralNodes.length; j++) {
+                        if (Math.random() > 0.7) {
+                            const distance = neuralNodes[i].position.distanceTo(neuralNodes[j].position);
+                            if (distance < 5) {
+                                const geometry = new THREE.BufferGeometry().setFromPoints([
+                                    neuralNodes[i].position,
+                                    neuralNodes[j].position
+                                ]);
+                                const line = new THREE.Line(geometry, lineMaterial);
+                                neuralScene.add(line);
+                            }
+                        }
+                    }
+                }
+
+                neuralRenderer.render(neuralScene, neuralCamera);
+            }
+            animateNeuralNetwork();
+
+            // Typed.js Animation
+            new Typed('.typed-text', {
+                strings: ["Python ", "Basic to Advance Microsoft Excel", "Web Development"],
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true,
+                showCursor: false
+            });
+
+            // Voice Wave Animation
+            function updateVoiceWave() {
+                const wave = document.querySelector('.voice-wave');
+                wave.innerHTML = '';
+                const barCount = Math.floor(Math.random() * 5) + 5;
+
+                for (let i = 0; i < barCount; i++) {
+                    const bar = document.createElement('div');
+                    bar.className = 'voice-bar';
+                    bar.style.height = (Math.random() * 20 + 5) + 'px';
+                    bar.style.animationDelay = (i * 0.1) + 's';
+                    wave.appendChild(bar);
+                }
+            }
+            setInterval(updateVoiceWave, 2000);
+            updateVoiceWave();
+
+            // Skill animations
+            document.querySelectorAll('.tech-item').forEach(item => {
+                const skillValue = item.getAttribute('data-skill');
+                item.style.setProperty('--skill-level', skillValue + '%');
+            });
+            // Load More Skills Button
+            document.getElementById('load-more-skills').addEventListener('click', function () {
+                const hiddenSkills = document.querySelectorAll('.hidden-skill');
+                const loadMoreBtn = this;
+
+                hiddenSkills.forEach(skill => {
+                    skill.classList.add('show-skill');
+                    skill.classList.remove('hidden-skill');
+                });
+
+                // Hide the button after all skills are shown
+                loadMoreBtn.style.display = 'none';
+            });
+            // Dark mode toggle
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+            // Set initial mode
+            if (prefersDarkScheme.matches) {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+            }
+
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                icon.classList.toggle('fa-moon');
+                icon.classList.toggle('fa-sun');
+            });
+
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Resume button functionality
+            document.getElementById('resume-btn').addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Downloading resume...');
+                // In a real implementation, this would link to your resume PDF
+            });
+
+            // Responsive adjustments
+            window.addEventListener('resize', () => {
+                neuralCamera.aspect = window.innerWidth / window.innerHeight;
+                neuralCamera.updateProjectionMatrix();
+                neuralRenderer.setSize(window.innerWidth, window.innerHeight);
+            });
+
+            // Certificate Modal Functionality
+            const modal = document.getElementById('certificate-modal');
+            const closeBtn = document.querySelector('.close-modal');
+            const certCards = document.querySelectorAll('.certification-card');
+
+            // Sample certificate images (replace with your actual certificate images)
+            const certificateImages = {
+                "Basic to Advanced Microsoft Excel": "Certifications/Basic-to-Advanced-Microsoft-Excel_Your-Certificate-for-Basic-to-Advanced-Microsoft-Excel_PANKAJ-YADAV_1.jpg",
+                "Web Development In Python": "Certifications/WORLD_1.jpg",
+                "Certification Program In Job Orientation": "Certifications/FOUNDATION_1.jpg",
+            };
+
+            certCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    const title = this.querySelector('h3').textContent;
+                    const issuer = this.querySelector('p').textContent;
+                    const date = this.querySelector('.certification-date').textContent;
+
+                    document.getElementById('modal-cert-title').textContent = title;
+                    document.getElementById('modal-cert-issuer').textContent = issuer;
+                    document.getElementById('modal-cert-date').textContent = date;
+                    document.getElementById('modal-cert-image').src = certificateImages[title];
+
+                    modal.style.display = 'flex';
+                });
+            });
+
+            closeBtn.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
