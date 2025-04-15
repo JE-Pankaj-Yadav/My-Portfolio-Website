@@ -303,12 +303,12 @@ body {
 }
 
 .stat-value {
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--primary);
 }
 
 .about-text {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .about-text p {
