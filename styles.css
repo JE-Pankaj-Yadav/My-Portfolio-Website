@@ -303,7 +303,7 @@ body {
 }
 
 .stat-value {
-    /* font-weight: bold; */
+    font-weight: bold;
     color: var(--primary);
 }
 

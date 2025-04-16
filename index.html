@@ -315,15 +315,15 @@
                     <div class="contact-item"><i class="fab fa-github"></i> https://github.com/JE-Pankaj-Yadav</div>
                     <div class="contact-item"><i class="fab fa-linkedin"></i> linkedin.com/in/yourusername</div>
                 </div>
-                <form class="contact-form holographic">
+                <form class="contact-form holographic" method="post" name="Contact_form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" placeholder="Your Name" required name="Your_Name">
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" placeholder="Your Email" required name="Your_Email">
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message " required></textarea>
+                        <textarea placeholder="Your Message " required name="Your_Message"></textarea>
                     </div>
                     <button type="submit" class="btn btn-gradient"><i class="fas fa-paper-plane"></i> Send
                         Message</button>
@@ -540,6 +540,21 @@
                     modal.style.display = 'none';
                 }
             });
+
+            // Contact Section---
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbz8yAHSSz5CRnZ-htdwZhXnP02JGlcr77SKSy50GfdbtgsrDqtTK4zvpHJGLLU6iyKK/exec'
+
+            const form = document.forms['Contact_form']
+
+            form.addEventListener('submit', e => {
+
+                e.preventDefault()
+
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => alert("Thank you! Form is submitted"))
+                    .then(() => { window.location.reload(); })
+                    .catch(error => console.error('Error!', error.message))
+            })
         });
     </script>
 </body>
